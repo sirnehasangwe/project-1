@@ -6,3 +6,6 @@ authorization_tokens.py
 
 # Some Python internal stuff that we can also ignore
 __pycache__
+
+.DS_Store
+`
