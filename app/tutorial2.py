@@ -21,33 +21,33 @@ message = ""
 from authorization_tokens import *
 
 # Option 3: list of possible mad libs
-
-template_list = ["what good is {} if {} didn't happen", "how am I supposed to {} when they haven't {} yet", "Where did you get that {} and how do you use it with the {} inside of you"]
-word_list1 = ["butter", "happiness"]
-word_list2 = ["india", "now or never", "beginners luck", "jellyfisyhing"]
-template = random.choice(template_list)
-word1 = random.choice(word_list1)
-word2 = random.choice(word_list2)
-
-message = template.format(word1, word2)
-
-#option 4:using if statement
-
-# string_template = "Hi there, I'm {}, master of {}."
 #
-# word_list1 = [ "Gritty", "Nicolas Cage" ]
-#
-# word_list2_a = [ "monsters", "playing hockey", "scaring people" ]
-# word_list2_b = [ "movies", "acting", "saying 'woah'" ]
-#
+# template_list = ["what good is {} if {} didn't happen", "how am I supposed to {} when they haven't {} yet", "Where did you get that {} and how do you use it with the {} inside of you"]
+# word_list1 = ["butter", "happiness"]
+# word_list2 = ["india", "now or never", "beginners luck", "jellyfisyhing"]
+# template = random.choice(template_list)
 # word1 = random.choice(word_list1)
+# word2 = random.choice(word_list2)
 #
-# if word1 == "Gritty":
-#     word2 = random.choice(word_list2_a)
-# elif word1 == "Nicolas Cage":
-#     word2 = random.choice(word_list2_b)
+# message = template.format(word1, word2)
+#
+# #option 4:using if statement
 
-# message = string_template.format(word1,word2)
+string_template = "Hi there, I'm {}, master of {}."
+
+word_list1 = [ "Gritty", "Nicolas Cage" ]
+
+word_list2_a = [ "monsters", "playing hockey", "scaring people" ]
+word_list2_b = [ "movies", "acting", "saying 'woah'" ]
+
+word1 = random.choice(word_list1)
+
+if word1 == "Gritty":
+    word2 = random.choice(word_list2_a)
+elif word1 == "Nicolas Cage":
+    word2 = random.choice(word_list2_b)
+
+message = string_template.format(word1,word2)
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)

@@ -1,3 +1,12 @@
+
+"""
+Sirneh Asangwe
+Radical Software, Fall 2021
+Project 1
+Sept 23, 2021
+python3
+  """
+
 import tweepy
 
 from authorization_tokens import *
@@ -9,4 +18,3 @@ api = tweepy.API(auth)
 
 api.update_status(MESSAGE_HERE)
 print("Done.")
-
